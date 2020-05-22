@@ -660,8 +660,7 @@
         },
         "status": {
           "description": "The pre validate operation status",
-          "type": "string",
-          "readOnly": true
+          "type": "string"
         }
       }
     },
