@@ -651,6 +651,20 @@
         }
       }
     },
+    "ErrorResponsePreValidate": {
+      "description": "The error response that indicates pre validate step of an operation has failed.",
+      "type": "object",
+      "properties": {
+        "error": {
+          "$ref": "#/definitions/ErrorDetails"
+        },
+        "status": {
+          "description": "The pre validate operation status",
+          "type": "string",
+          "readOnly": true
+        }
+      }
+    },
     "ErrorResponse": {
       "description": "The error response that indicates why an operation has failed.",
       "type": "object",
