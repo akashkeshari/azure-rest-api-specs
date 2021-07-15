@@ -188,7 +188,7 @@
           "200": {
             "description": "Resource retrieved successfully.",
             "schema": {
-              "$ref": "#/definitions/ConnectedCluster"
+              "$ref": "#/definitions/ConnectedClusterResponse"
             }
           },
           "default": {
@@ -497,6 +497,31 @@
         "properties",
         "identity"
       ],
+      "properties": {
+        "identity": {
+          "$ref": "#/definitions/ConnectedClusterIdentity",
+          "description": "The identity of the connected cluster."
+        },
+        "properties": {
+          "x-ms-client-flatten": true,
+          "$ref": "#/definitions/ConnectedClusterProperties",
+          "description": "Describes the connected cluster resource properties."
+        },
+        "systemData": {
+          "$ref": "#/definitions/SystemData",
+          "readOnly": true,
+          "description": "Metadata pertaining to creation and last modification of the resource"
+        }
+      },
+      "allOf": [
+        {
+          "$ref": "../../../../../common-types/resource-management/v2/types.json#/definitions/TrackedResource"
+        }
+      ],
+      "description": "Represents a connected cluster."
+    },
+    "ConnectedClusterResponse": {
+      "type": "object",
       "properties": {
         "identity": {
           "$ref": "#/definitions/ConnectedClusterIdentity",
